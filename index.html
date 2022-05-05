@@ -15,11 +15,20 @@
 
     <div class="co-md-10 col-sm-12 container-fluid main-div">
         <div class="col-10 m-auto centered-div">
-            <form action="#" class="col-12">
-                <div class="mb-3 col-12">
-                    <input class="form-control form-control-lg" type="text" id="hero_name" required="true"
-                        placeholder="اكتب الاسم هنا">
+            <form action="#" class="col-12 row">
+
+                <div class="mb-3 col-md-6 col-sm-12">
+                    <select class="form-control form-control-lg text-end" id="gender">
+                        <option value="1">اختر النوع</option>
+                        <option value="1">بطل</option>
+                        <option value="2">بطلة</option>
+                    </select>
                 </div>
+
+                <div class="mb-3 col-md-6 col-sm-12">
+                    <input class="form-control form-control-lg" type="text" id="hero_name" placeholder="اكتب الاسم هنا">
+                </div>
+
                 <div class="mb-3 text-center col-12">
                     <button type="button" class="btn btn-primary mb-3" onclick="handelForm()">تحميل الشهادة</button>
                 </div>

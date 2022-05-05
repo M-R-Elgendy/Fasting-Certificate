@@ -40,7 +40,15 @@ const {
 
 async function createCert(heroName) {
 
-    const url = 'assets/certificate/cert.pdf'
+    const gender = document.querySelector("#gender").value;
+    let url = '';
+
+    if (gender == '1') {
+        url = 'assets/certificate/cert.pdf'
+    } else {
+        url = 'assets/certificate/cert2.pdf'
+    }
+
     const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer())
 
     const fontUrl = 'assets/fonts/tradbdo.ttf'
@@ -75,7 +83,7 @@ async function createCert(heroName) {
 
     const pdfBytes = await pdfDoc.save()
 
-    download(pdfBytes, `شهادة البطل ${heroName}.pdf`, "application/pdf");
+    download(pdfBytes, `شهادة ${heroName}.pdf`, "application/pdf");
 
 }
 
